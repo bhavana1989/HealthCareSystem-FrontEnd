@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TestResult } from 'src/app/Interfaces/TestResult';
 import { TestResultService } from 'src/app/Services/TestResult.service';
-
 @Component({
-  selector: 'app-update',
-  templateUrl: './update.component.html',
-  styleUrls: ['./update.component.css']
+  selector: 'app-updatetestresult',
+  templateUrl: './updatetestresult.component.html',
+  styleUrls: ['./updatetestresult.component.css']
 })
-export class UpdateComponent implements OnInit {
+export class UpdatetestresultComponent implements OnInit {
+
   testResultid: number;
   test: TestResult;
   
@@ -16,7 +16,6 @@ export class UpdateComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.test = new TestResult();
     this.testResultid = this.actRouter.snapshot.params['testResultid'];
     this.eService.getTestResultById(this.testResultid).subscribe(data => {
       this.test = data;
@@ -29,4 +28,5 @@ export class UpdateComponent implements OnInit {
     });
   }
 }
+
 

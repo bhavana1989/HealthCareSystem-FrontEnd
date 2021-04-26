@@ -16,8 +16,7 @@
                 <td>{{t.testcondition}}</td>
                 <td>
                     <button class="btn btn-link" (click)="removeTestResult(t.testResultid)">Remove</button>
-                    <button class="btn btn-link"
-                        [routerLink]="['/testresult/updateresult',t.testResultid]">Update</button>
+                    <button class="btn btn-link"[routerLink]="['/testresult/updateresult',t.testResultid]">Update</button>
                 </td>
             </tr>
         </tbody>

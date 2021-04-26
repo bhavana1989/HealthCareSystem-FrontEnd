@@ -21,6 +21,7 @@ import { UserRegistrarionComponent } from './Components/User/UserRegistrarion/Us
 
 import { AllTestresultComponent } from './Components/TestResult/all-testresult/all-testresult.component';
 import { CreateComponent } from './Components/TestResult/create/create.component';
+import { UpdatetestresultComponent } from './Components/TestResult/updatetestresult/updatetestresult.component';
 
 const routes: Routes = [
   {
@@ -137,4 +138,5 @@ export const routingComponents = [
   UpdateComponent,
   UserComponent,
   UserRegistrarionComponent,
+  UpdatetestresultComponent
 ];
