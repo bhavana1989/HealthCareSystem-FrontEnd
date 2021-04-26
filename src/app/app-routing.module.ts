@@ -19,6 +19,9 @@ import { UpdateComponent } from './Components/Patient/Update/Update.component';
 import { UserComponent } from './Components/User/User.component';
 import { UserRegistrarionComponent } from './Components/User/UserRegistrarion/UserRegistrarion.component';
 
+import { AllTestresultComponent } from './Components/TestResult/all-testresult/all-testresult.component';
+import { CreateComponent } from './Components/TestResult/create/create.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -68,6 +71,21 @@ const routes: Routes = [
   {
     path: 'testresult',
     component: TestResultComponent,
+
+    children: [
+      {
+        path: 'add',
+        component: CreateComponent
+      },
+      {
+        path: 'all',
+        component: AllTestresultComponent
+      },
+      {
+        path: 'updateresult/:testResultid',
+        component: UpdateComponent
+      },
+    ],
   },
   {
     path: 'diagnostictest',
@@ -99,7 +117,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 export const routingComponents = [
   LoginComponent,
   AppComponent,

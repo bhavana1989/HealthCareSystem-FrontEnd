@@ -11,6 +11,10 @@ import { CenterService } from './Services/DiagnosticCenter.service';
 import { AppointmentService } from './Services/Appointment.service';
 import { TestResultService } from './Services/TestResult.service';
 import { DiagnosticTestService } from './Services/DiagnosticTest.service';
+import { TestResultComponent } from './Components/TestResult/TestResult.component';
+import { AllTestresultComponent } from './Components/TestResult/all-testresult/all-testresult.component';
+import { CreateComponent } from './Components/TestResult/create/create.component';
+import { UpdateComponent } from './Components/TestResult/update/update.component';
 
 @NgModule({
   declarations: [routingComponents],
@@ -29,6 +33,10 @@ import { DiagnosticTestService } from './Services/DiagnosticTest.service';
     AppointmentService,
     DiagnosticTestService,
     TestResultService,
+    TestResultComponent,
+    AllTestresultComponent,
+    CreateComponent,
+    UpdateComponent
   ],
   bootstrap: [AppComponent],
   exports: [routingComponents],
